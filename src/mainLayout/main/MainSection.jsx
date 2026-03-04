@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import TicketCard from "../Card/TicketCard";
 
-const MainSection = ({ data }) => {
-  const [clickData, setClickData] = useState([]);
+const MainSection = ({ data, clickData, setClickData }) => {
   const clickedCard = (data) => {
     // console.log(data);
     setClickData([...clickData, data]);
