@@ -1,12 +1,12 @@
 import React from "react";
 
-const TicketCard = ({ ticket, onSelect }) => {
+const TicketCard = ({ ticket, clickedCard }) => {
   const { id, title, description, customer, priority, status, createdAt } =
     ticket;
 
   return (
     <div
-      onClick={() => onSelect(ticket)}
+      onClick={() => clickedCard(ticket)}
       className="bg-white rounded-lg shadow-md p-5 cursor-pointer hover:shadow-lg transition duration-300"
     >
       {/* Top Section */}
