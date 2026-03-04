@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "title": "Login Issue",
+    "description": "Customer unable to login using correct credentials.",
+    "customer": "Rahim Uddin",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-01"
+  },
+  {
+    "id": 2,
+    "title": "Payment Failed",
+    "description": "Payment gateway showing transaction failed error.",
+    "customer": "Karim Ahmed",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-02"
+  },
+  {
+    "id": 3,
+    "title": "Password Reset Not Working",
+    "description": "Reset link expired immediately after clicking.",
+    "customer": "Sadia Islam",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-02"
+  },
+  {
+    "id": 4,
+    "title": "Profile Update Error",
+    "description": "Customer cannot update profile information.",
+    "customer": "Nusrat Jahan",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2026-03-03"
+  },
+  {
+    "id": 5,
+    "title": "Order Not Delivered",
+    "description": "Order marked delivered but not received.",
+    "customer": "Hasan Mahmud",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-03"
+  },
+  {
+    "id": 6,
+    "title": "App Crashing",
+    "description": "Mobile app crashes after login.",
+    "customer": "Tamim Hossain",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 7,
+    "title": "Invoice Download Issue",
+    "description": "Invoice PDF not downloading.",
+    "customer": "Mim Akter",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 8,
+    "title": "Wrong Billing Amount",
+    "description": "Customer charged extra amount.",
+    "customer": "Rafiq Khan",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 9,
+    "title": "Email Notification Not Received",
+    "description": "Customer not receiving order confirmation emails.",
+    "customer": "Tania Sultana",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 10,
+    "title": "Dashboard Loading Slow",
+    "description": "Dashboard takes too much time to load.",
+    "customer": "Arif Hossain",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 11,
+    "title": "Coupon Code Not Applying",
+    "description": "Discount coupon showing invalid.",
+    "customer": "Shila Begum",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 12,
+    "title": "Account Suspended",
+    "description": "Account suspended without notice.",
+    "customer": "Jahid Hasan",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 13,
+    "title": "Language Change Not Saving",
+    "description": "Selected language resets after refresh.",
+    "customer": "Rumana Aktar",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 14,
+    "title": "Search Function Not Working",
+    "description": "Search returns no results even for valid queries.",
+    "customer": "Mehedi Hasan",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 15,
+    "title": "Two-Factor Authentication Error",
+    "description": "OTP code not validating correctly.",
+    "customer": "Farhana Yasmin",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-04"
+  }
+]
