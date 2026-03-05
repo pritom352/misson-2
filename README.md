@@ -1,16 +1,21 @@
-# React + Vite
+1. What is JSX, and why is it used?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+JSX এর পূর্ণরূপ JavaScript XML। এটি React-এ JavaScript এর ভিতরে HTML-এর মতো syntax ব্যবহার করে UI লিখতে সাহায্য করে। এর ফলে কোড সহজে পড়া ও লেখা যায়।
 
-Currently, two official plugins are available:
+2. What is the difference between State and Props?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Props হলো parent component থেকে child component-এ data পাঠানোর জন্য ব্যবহৃত read-only value।
+State হলো component-এর নিজস্ব পরিবর্তনশীল data, যা পরিবর্তন হলে component আবার render হয়।
 
-## React Compiler
+3. What is the useState hook, and how does it work?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+useState হলো React-এর একটি Hook যা functional component-এ state manage করার জন্য ব্যবহার করা হয়।
+State পরিবর্তন করলে React component-কে আবার render করে UI আপডেট করে।
 
-## Expanding the ESLint configuration
+4. How can you share state between components in React?
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+React-এ state share করার জন্য সাধারণত state-কে common parent component-এ নেওয়া হয় (lifting state up) এবং তারপর props এর মাধ্যমে child component-গুলোতে পাঠানো হয়।
+
+5. How is event handling done in React?
+
+React-এ event handling করা হয় JavaScript function ব্যবহার করে এবং event-গুলো camelCase format-এ লেখা হয়। Event trigger হলে সেই function execute হয়।

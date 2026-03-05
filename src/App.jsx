@@ -14,8 +14,8 @@ function App() {
   }, []);
 
   const [clickData, setClickData] = useState([]);
+  const [resolvedTask, setResolvedTask] = useState([]);
 
-  const [completedBtnId, setCompletedBtnId] = useState(" ");
   const [completedCount, setCompletedCount] = useState([]);
   // console.log(completedBtnId);
 
@@ -24,7 +24,8 @@ function App() {
     // setCompletedBtnId(data);
     // console.log(completedBtnId);
 
-    const a = clickData.filter((id) => id.id != data);
+    const a = clickData.filter((id) => id.id != data.id);
+    setResolvedTask([...resolvedTask, data]);
 
     setClickData(a);
   };
@@ -40,7 +41,7 @@ function App() {
         completedCount={completedCount}
         setCompletedCount={setCompletedCount}
         completedBtn={completedBtn}
-        setCompletedBtnId={setCompletedBtnId}
+        resolvedTask={resolvedTask}
       />
       <Footer />
     </div>
