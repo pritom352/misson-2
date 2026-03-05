@@ -1,12 +1,12 @@
 import React from "react";
 import TicketCard from "../Card/TicketCard";
+import { toast } from "react-toastify";
 
 const MainSection = ({
-  data,
+  fetchData,
   clickData,
   setClickData,
-  setCompletedCount,
-  completedCount,
+
   completedBtn,
   resolvedTask,
 }) => {
@@ -14,17 +14,20 @@ const MainSection = ({
 
   const clickedCard = (data) => {
     setClickData([...clickData, data]);
+    toast("Data add to task status");
   };
   // console.log(clickData);
 
   return (
-    <div className=" md:grid md:grid-cols-11 p-6 gap-10">
+    <div className=" md:grid md:grid-cols-11 p-6 mt-9 gap-10">
       <div className=" col-span-8">
-        <h5 className="text-xl font-semibold mb-4">Customer Tickets</h5>
+        <h5 className=" text-xl md:text-2xl text-white font-bold  mb-4 ">
+          Customer Tickets
+        </h5>
 
         {/* Grid container */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {data.map((ticket) => (
+          {fetchData.map((ticket) => (
             <TicketCard
               clickedCard={clickedCard}
               key={ticket.id}
@@ -37,7 +40,9 @@ const MainSection = ({
       <div className="col-span-3">
         {/* task status section */}
         <div>
-          <h5 className="text-xl font-semibold mb-4">Task Status</h5>
+          <h5 className="text-xl md:text-2xl text-white font-black mb-4">
+            Task Status
+          </h5>
           {clickData.length === 0 ? (
             <p>Select a ticket to add to Task Status</p>
           ) : (
@@ -55,7 +60,9 @@ const MainSection = ({
           )}
         </div>
         <div className="mt-10">
-          <h5 className="text-xl font-semibold mb-4">Resolved Task</h5>
+          <h5 className="text-xl md:text-2xl text-white font-bold mb-4">
+            Resolved Task
+          </h5>
           {resolvedTask.length === 0 ? (
             <p>No resolved tasks yet.</p>
           ) : (

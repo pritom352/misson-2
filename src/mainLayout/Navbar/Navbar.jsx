@@ -4,7 +4,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-white border px-6 py-3">
+    <div className="bg-white  px-6 py-3">
       <div className="flex justify-between items-center">
         {/* Logo */}
         <h1 className="font-bold text-xl md:text-2xl">CS — Ticket System</h1>
@@ -18,7 +18,7 @@ const Navbar = () => {
           <p className="cursor-pointer">Download</p>
           <p className="cursor-pointer">Contact</p>
 
-          <button className="border rounded-xl px-4 py-2 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white">
+          <button className=" rounded-xl px-4 py-2 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white">
             + New Ticket
           </button>
         </div>
@@ -41,7 +41,7 @@ const Navbar = () => {
           <p>Download</p>
           <p>Contact</p>
 
-          <button className="border rounded-xl px-4 py-2 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white w-fit">
+          <button className=" rounded-xl px-4 py-2 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white w-fit">
             + New Ticket
           </button>
         </div>

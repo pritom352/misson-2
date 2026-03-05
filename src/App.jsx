@@ -3,31 +3,31 @@ import Footer from "./mainLayout/Footer/Footer";
 import Navbar from "./mainLayout/Navbar/Navbar";
 import MainSection from "./mainLayout/main/MainSection";
 import Banner from "./mainLayout/Banner/Banner";
+import { toast } from "react-toastify";
 
 function App() {
-  const [data, setData] = useState([]);
+  const [fetchData, setFetchData] = useState([]);
 
   useEffect(() => {
     fetch("/data.json")
       .then((res) => res.json())
-      .then((result) => setData(result));
+      .then((result) => setFetchData(result));
   }, []);
 
   const [clickData, setClickData] = useState([]);
   const [resolvedTask, setResolvedTask] = useState([]);
 
   const [completedCount, setCompletedCount] = useState([]);
-  // console.log(completedBtnId);
 
   const completedBtn = (data) => {
     setCompletedCount([...completedCount, data]);
-    // setCompletedBtnId(data);
-    // console.log(completedBtnId);
 
     const a = clickData.filter((id) => id.id != data.id);
     setResolvedTask([...resolvedTask, data]);
 
     setClickData(a);
+    setFetchData(fetchData.filter((d) => d.id != data.id));
+    toast("Task is resolved");
   };
 
   return (
@@ -35,7 +35,7 @@ function App() {
       <Navbar />
       <Banner clickData={clickData} completedCount={completedCount}></Banner>
       <MainSection
-        data={data}
+        fetchData={fetchData}
         clickData={clickData}
         setClickData={setClickData}
         completedCount={completedCount}
