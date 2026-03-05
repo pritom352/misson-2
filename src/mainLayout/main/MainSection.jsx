@@ -1,12 +1,19 @@
 import React from "react";
 import TicketCard from "../Card/TicketCard";
 
-const MainSection = ({ data, clickData, setClickData }) => {
+const MainSection = ({
+  data,
+  clickData,
+  setClickData,
+  setCompletedCount,
+  completedCount,
+  completedBtn,
+}) => {
   const clickedCard = (data) => {
     // console.log(data);
     setClickData([...clickData, data]);
   };
-  console.log(clickData);
+  // console.log(clickData);
 
   return (
     <div className=" grid grid-cols-11 p-6 gap-10">
@@ -33,7 +40,10 @@ const MainSection = ({ data, clickData, setClickData }) => {
           clickData.map((data) => (
             <div className=" p-3 bg-white rounded-4 mb-3">
               <p className=" mb-2">{data.title}</p>
-              <button className=" bg-green-500 text-white w-full py-2">
+              <button
+                onClick={() => completedBtn(data.id)}
+                className=" bg-green-500 text-white w-full py-2"
+              >
                 Complete
               </button>
             </div>
